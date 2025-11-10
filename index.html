@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>0RG4N1C – Cosmic Outpost</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      background: #C0C0C0; 
+      font-family: 'JetBrains Mono', monospace; 
+      margin: 0; 
+      padding: 0;
+      color: #000;
+    }
+    .title-bar {
+      background: linear-gradient(to right, #000080, #1084D0);
+      color: white;
+      padding: 3px 8px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #808080;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .title-bar .buttons { font-size: 0.7rem; }
+    .window {
+      background: #C0C0C0;
+      border: 2px outset #DFDFDF;
+      border-top-color: #FFFFFF;
+      border-left-color: #FFFFFF;
+      margin: 10px;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    }
+    .menu-bar {
+      background: #C0C0C0;
+      border-bottom: 1px solid #808080;
+      padding: 2px 5px;
+      font-size: 0.8rem;
+    }
+    .sidebar {
+      background: #DFDFDF;
+      border-right: 1px solid #808080;
+      padding: 10px;
+      font-size: 0.8rem;
+    }
+    .product-item {
+      background: white;
+      border: 1px solid #808080;
+      margin: 5px 0;
+      padding: 5px;
+      font-size: 0.8rem;
+    }
+    .btn-win {
+      background: #C0C0C0;
+      border: 1px outset #DFDFDF;
+      padding: 2px 8px;
+      font-size: 0.8rem;
+    }
+    .btn-win:active {
+      border: 1px inset #DFDFDF;
+    }
+    .status-bar {
+      background: #C0C0C0;
+      border-top: 1px solid #808080;
+      padding: 2px 5px;
+      font-size: 0.7rem;
+      text-align: right;
+    }
+    .playlist {
+      background: white;
+      border: 1px inset #DFDFDF;
+      height: 200px;
+      padding: 5px;
+      font-size: 0.8rem;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid p-0">
+  <!-- Main Window -->
+  <div class="window">
+    <!-- Title Bar -->
+    <div class="title-bar">
+      <span>0RG4N1C – Cosmic Outpost v1.0</span>
+      <span class="buttons">[−] [□] [×]</span>
+    </div>
+
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+      <u>F</u>ile  <u>E</u>dit  <u>V</u>iew  <u>H</u>elp
+    </div>
+
+    <div class="row g-0">
+      <!-- Left Sidebar -->
+      <div class="col-md-3 sidebar">
+        <strong>BROWSE</strong><br>
+        <select class="form-select form-select-sm mt-2">
+          <option>all genres</option>
+          <option>Atmospheres</option>
+          <option>Organic</option>
+          <option>Cosmic</option>
+        </select>
+
+        <hr>
+
+        <strong>FILTER</strong><br>
+        <input type="text" class="form-control form-control-sm mt-2" placeholder="Title">
+        <input type="text" class="form-control form-control-sm mt-1" placeholder="Keywords">
+        <button class="btn btn-win btn-sm w-100 mt-2">Search</button>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-md-6 p-3">
+        <h5 class="text-center">AI broke the world at <a href="https://w341th.com">w341th.com</a>.<br>We grow the fix.</h5>
+
+        <!-- Product 1 -->
+        <div class="product-item">
+          <strong>Nebula Tea</strong><br>
+          $15 — Calms the glitch. Organic lunar blend.<br>
+          <button class="snipcart-add-item btn-win btn-sm"
+            data-item-id="nebula-tea"
+            data-item-price="15.00"
+            data-item-url="/"
+            data-item-name="Nebula Tea">
+            Add to Cart
+          </button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-item">
+          <strong>Orbit Hoodie</strong><br>
+          $45 — Space-dyed organic cotton.<br>
+          <button class="snipcart-add-item btn-win btn-sm"
+            data-item-id="orbit-hoodie"
+            data-item-price="45.00"
+            data-item-url="/"
+            data-item-name="Orbit Hoodie">
+            Add to Cart
+          </button>
+        </div>
+
+        <!-- Add 2–3 more -->
+      </div>
+
+      <!-- Right Playlist -->
+      <div class="col-md-3 p-3">
+        <strong>ORDER LIST</strong>
+        <div class="playlist mt-2">
+          Your cart is empty.<br>
+          Add items using the button.
+        </div>
+        <button class="btn btn-win btn-sm w-100 mt-2">Checkout</button>
+      </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      Ready | 0RG4N1C v1.0 | @sitaragabie
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js"></script>
+<div hidden id="snipcart" data-api-key="YOUR_SNIPCART_TEST_KEY"></div>
+</body>
+</html>
